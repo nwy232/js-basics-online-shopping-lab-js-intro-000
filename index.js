@@ -21,17 +21,28 @@ function addToCart(item) {
 
 function viewCart() {
   // write your code here
-  if(!getCart().length)
+  let l=getCart().length;
+  if(!l)
     console.log("Your shopping cart is empty.")
 
   else {
     var array=[]
-    for(var i=0;i<getCart().length;i++)
+    for(var i=0;i<l;i++)
     {
-      array.push(`${Object.keys(cart[i])} at $${getCart()[i]['itemName']}`)
+      array.push(`${Object.keys(cart[i])} at \$${getCart()[i]['itemName']}`)
     }
 
-    console.log(`In your cart, you have ${array.join("and")}.`)
+    switch(array.length)
+    {
+      case 1: break;
+      
+      case 2: console.log(`In your caet, you have ${array.join("and")}. `);
+
+      default:
+        array[l-1]="and ".concat(array[l-1]);
+        console.log(`In your cart, you have ${array.join(", ")}.`)
+    }
+  
   }
 }
 
