@@ -66,7 +66,7 @@ function removeFromCart(item) {
   var l=cart.length
   for(var i=0;i<l;i++)
   {
-    if(cart[i].hasOwnProperty('item'))
+    if(cart[i].hasOwnProperty(item))
     {
       cart=cart.slice(0,i).concat(cart.slice(i+1));
       l--;
