@@ -37,7 +37,7 @@ function viewCart() {
 
     switch(array.length)
     {
-      case 1: break;
+      case 1: console.log(`In your cart, you have ${array}.`);
 
       case 2: console.log(`In your cart, you have ${array.join("and")}. `);
 
