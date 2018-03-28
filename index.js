@@ -55,7 +55,7 @@ function total() {
 
   for(var i=0;i<getCart().length;i++)
   {
-    total+=getCart()[i]["itemName"];
+    total+=cart[i][itemName];
   }
   return total
 }
