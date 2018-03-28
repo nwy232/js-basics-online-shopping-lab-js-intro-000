@@ -27,16 +27,19 @@ function viewCart() {
 
   else {
     var array=[]
+    var 
     for(var i=0;i<l;i++)
     {
-      array.push(`${Object.keys(cart[i])} at \$${getCart()[i]['itemName']}`)
+      var item=Object.keys(cart[i])
+      var price=cart[i][item]
+      array.push(`${item} at \$${price}`)
     }
 
     switch(array.length)
     {
       case 1: break;
 
-      case 2: console.log(`In your caet, you have ${array.join("and")}. `);
+      case 2: console.log(`In your cart, you have ${array.join("and")}. `);
 
       default:
         array[l-1]="and ".concat(array[l-1]);
