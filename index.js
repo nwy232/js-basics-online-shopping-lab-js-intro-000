@@ -63,11 +63,18 @@ function total() {
 
 function removeFromCart(item) {
   // write your code here
-  if(!cart.hasOwnProperty('item'))
-    console.log('That item is not in your cart.')
+  var l=cart.length
+  for(var i=0;i<l;i++)
+  {
+    if(cart[i].hasOwnProperty('item'))
+    {
+      cart=cart.slice(0,i).concat(cart.slice(i+1));
+      l=0;
+      return cart
+    }
+  }
 
-  else
-    delete cart['item']
+    console.log('That item is not in your cart.')
 
   return cart
 
