@@ -27,7 +27,7 @@ function viewCart() {
 
   else {
     var array=[]
-    var
+
     for(var i=0;i<l;i++)
     {
       var item=Object.keys(cart[i])
