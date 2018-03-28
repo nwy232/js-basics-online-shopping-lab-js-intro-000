@@ -39,7 +39,7 @@ function viewCart() {
     {
       case 1: console.log(`In your cart, you have ${array}.`);
 
-      case 2: console.log(`In your cart, you have ${array.join(" and ")}. `);
+      case 2: console.log(`In your cart, you have ${array.join(" and ")}.`);
 
       default:
         array[l-1]="and ".concat(array[l-1]);
